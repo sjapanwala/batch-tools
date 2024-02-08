@@ -4,14 +4,8 @@ cls
 :: how does it work?
 :: uses ping to display the bar because using "timout" is way to slow
 :: so after putting in your function, it will make a new bar
-
-:main
-FOR /F %%a IN ('curl https://ipv4.icanhazip.com/') DO set ip=%%a
-cls
-echo %ip%
-cls
-echo bar demo: "basicbar"
-echo example : "example1"
+echo demo: "basicbar"
+echo ex1 : "example1"
 set /p choice=: 
 if %choice%==basicbar goto basicbar
 if %choice%==example1 goto ex1
@@ -82,6 +76,10 @@ PING -n 1 8.8.8.8 | FIND "TTL=">nul && echo [40;33m━━━━━━━━━�
 PING -n 1 8.8.8.8 | FIND "TTL=">nul && cls
 PING -n 1 8.8.8.8 | FIND "TTL=">nul && echo [40;37mDownload Finished!
 PING -n 1 8.8.8.8 | FIND "TTL=">nul && echo [40;32m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+pause>nul
+goto main
+
+
 pause>nul
 goto main
 
