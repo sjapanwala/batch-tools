@@ -1,33 +1,17 @@
 @echo off
 chcp 65001
 cls
-echo.
-rem PING -n 1 8.8.8.8 | FIND "TTL=">nul && echo h
-rem PING -n 1 8.8.8.8 | FIND "TTL=">nul && echo he
-rem PING -n 1 8.8.8.8 | FIND "TTL=">nul && echo hel
-rem PING -n 1 8.8.8.8 | FIND "TTL=">nul && echo hell
-rem PING -n 1 8.8.8.8 | FIND "TTL=">nul && echo hello
-rem PING -n 1 8.8.8.8 | FIND "TTL=">nul && echo hello w
-rem PING -n 1 8.8.8.8 | FIND "TTL=">nul && echo hello wo
-rem PING -n 1 8.8.8.8 | FIND "TTL=">nul && echo hello wor
-rem PING -n 1 8.8.8.8 | FIND "TTL=">nul && echo hello worl
-rem PING -n 1 8.8.8.8 | FIND "TTL=">nul && echo hello world
-rem PING -n 1 8.8.8.8 | FIND "TTL=">nul && echo h                     h
-rem PING -n 1 8.8.8.8 | FIND "TTL=">nul && echo he                   he
-rem PING -n 1 8.8.8.8 | FIND "TTL=">nul && echo hel                 hel
-rem PING -n 1 8.8.8.8 | FIND "TTL=">nul && echo hell               hell
-rem PING -n 1 8.8.8.8 | FIND "TTL=">nul && echo hello             hello
-rem PING -n 1 8.8.8.8 | FIND "TTL=">nul && echo hello w         hello w
-rem PING -n 1 8.8.8.8 | FIND "TTL=">nul && echo hello wo       hello wo
-rem PING -n 1 8.8.8.8 | FIND "TTL=">nul && echo hello wor     hello wor  
-rem PING -n 1 8.8.8.8 | FIND "TTL=">nul && echo hello worl   hello worl
-rem PING -n 1 8.8.8.8 | FIND "TTL=">nul && echo hello world hello world
-ping -t 2 0 10 127.0.0.1 >nul 
+:: how does it work?
+:: uses ping to display the bar because using "timout" is way to slow
+:: so after putting in your function, it will make a new bar
+
 :main
 FOR /F %%a IN ('curl https://ipv4.icanhazip.com/') DO set ip=%%a
 cls
 echo %ip%
 cls
+echo bar demo: "basicbar"
+echo example : "example1"
 set /p choice=: 
 if %choice%==basicbar goto basicbar
 if %choice%==example1 goto ex1
