@@ -1,0 +1,5 @@
+instructions for batch bar.
+
+this is a simple graphic / aesthetic design, inspiration taken from the pip install load bar.
+
+you can use this code, for help please contact me.
