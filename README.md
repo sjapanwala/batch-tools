@@ -2,4 +2,5 @@
 
 #### tools to make your batch coding experience more enjoyable!
 
-1) batch bar
+#### all tools are in thier designated folders and they are provided with an instructions file. for more help please contact me!
+
